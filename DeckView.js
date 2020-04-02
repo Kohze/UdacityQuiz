@@ -32,7 +32,7 @@ export default class DeckView extends React.Component {
 
 		return (
       <View>
-        <Animated.View style={{ flex: 1, opacity: this.state.opacity}}>
+        <Animated.View style={{opacity: this.state.opacity}}>
           <Card style={{ margin: 3 }}>{cardItems && currentItem && deck}</Card>
         </Animated.View>
       </View>

@@ -45,26 +45,24 @@ export default class Quiz extends React.Component {
 					Card Counter {this.state.questionIndex} / {numberQuestions}
 				</Title>
 				<Paragraph>
-					{' '}
 					Question: {viewedItemCards && viewedItemCards[this.state.questionIndex].question}{' '}
 				</Paragraph>
 				{this.state.showAnswer && (
 					<Paragraph>
-						{' '}
 						Answer: {viewedItemCards && viewedItemCards[this.state.questionIndex].answer}{' '}
 					</Paragraph>
 				)}
 				{this.state.showAnswer && (
-					<div>
+					<View>
 						<Button onPress={() => this.increment(true, numberQuestions)}>correct</Button>
 						<Button onPress={() => this.increment(false, numberQuestions)}>Incorrect</Button>
-					</div>
+					</View>
 				)}
 
 				{!this.state.showAnswer && (
-					<div>
+					<View>
 						<Button onPress={() => this.setState({ showAnswer: true })}>Show Answer</Button>
-					</div>
+					</View>
 				)}
 			</Card.Content>
 		);

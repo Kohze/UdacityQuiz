@@ -38,6 +38,7 @@ export default class App extends React.Component {
   }
   
   componentDidMount(){
+	this.clearLocalNotification()
     this.setLocalNotification()
   }
 
@@ -94,7 +95,7 @@ export default class App extends React.Component {
                 tomorrow.setMinutes(0)
   
                 Notifications.scheduleLocalNotificationAsync(
-                  createNotification(),
+                  this.createNotification(),
                   {
                     time: tomorrow,
                     repeat: 'day',
